@@ -56,7 +56,6 @@ class Critter:
         self.__pass_time()
 
     def eat(self, food = 4):
-        x1=int(input('Сколько вы хотите корма дать?'))
         if x1 <= 10 and x1 > 0:
             print("Мррр...  Спасибо!")
             self.hunger -= food
@@ -70,7 +69,6 @@ class Critter:
             print('Остановитесь!!! Вы перекомите зверюшку')
             self.__pass_time()
     def play(self, fun = 4):
-        x2=int(input('Сколько времени вы хотите поиграть?'))
         if x2 <= 10 and x2 > 0:
             print("Уиии!")
             self.boredom -= fun
@@ -95,7 +93,8 @@ class Critter:
 def main():
     crit_name = input("Как вы назовете свою зверюшку?: ")
     crit = Critter(crit_name)
-
+    x1=int(input('Сколько вы хотите корма дать?'))
+    x2=int(input('Сколько времени вы хотите поиграть?'))
     choice = None  
     while choice != "0":
         print \
