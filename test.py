@@ -1,25 +1,21 @@
 class Tv:
-    def __init__(self, vol1, vol2):
-        self.vol1=vol1
-        self.vol2=vol2
     def num(self,chanel):
-        if a<=100:
+        if chanel<=100:
             print('сейчас стоит канал:',chanel)
-        elif a>100:
+        elif chanel>100:
             print('Нету каналов выше цыфры 100')
-    def v1(self,u):
-        u=self.vol1-self.vol2
-        print('Громкость увеличилась на',u)
-
-
-    def v2(self,y):
-        y=self.vol2-self.vol1
-        print('Громкость уменьшилась на',y)
+    def v1(self,vol1):
+        if vol1<=30:
+            print('Вы успешно изменили громкость на:',vol1)
+        elif vol1>30:
+            print('Это слишком громко')
+        elif vol1<=0:
+            print('Вы же ничего не')
+        
 def main():
     crit = Tv()
     chanel=int(input('Поставьте номер канала:'))
-    vol1=int(input('Увеличить громкость на:'))
-    vol2=int(input('Уменьшить громкость на:'))
+    vol1=int(input('Ввести громкость:'))
     choice = None  
     while choice != "0":
         print \
@@ -28,8 +24,7 @@ def main():
     
         0 - Выйти
         1 - Номер канала
-        2 - Увеличить громкость 
-        3 - Уменьшить громкость
+        2 - Изменить громкость 
         """)
     
         choice = input("Ваш выбор: ")
@@ -45,11 +40,10 @@ def main():
         
         # кормление зверюшки
         elif choice == "2":
-            crit.v1()
+            crit.v1(vol1)
          
         # игра со зверюшкой
-        elif choice == "3":
-            crit.v2()
+
 
         # непонятный пользовательский ввод
         else:
