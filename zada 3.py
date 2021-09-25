@@ -55,17 +55,10 @@ def main():
             print("До свидания.")
 
         elif choice == "1":
-            crit.num()
+            crit.num=int(input('Ввести канал:'))
         
         elif choice == "2":
-            crit.v1()
-         
-        elif choice == "3":
-            crit.v2()
-        
-        elif choice == "4":
-            crit.v3()
-
+            crit.v1=int(input('Изменить громкость:'))
         else:
             print("Извините, в меню нет пункта", choice)
     
