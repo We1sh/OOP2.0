@@ -1,6 +1,8 @@
-x1 = 0
-x3 = 0
+
 class Tv:
+    def __init__(self, b, c):
+        self.b=b
+        self.c=c
 
     def num(self):
         print("Вы успешно включили телевизор")
@@ -9,7 +11,6 @@ class Tv:
         x = int(input('Выставте громкость'))
         if x > 100:
             print('громкость поставлена на макс.')
-            x1 = 100
         elif x <= 100 and x >= 0:
             print('Громкость изменена')
             x1 = 0
@@ -27,12 +28,13 @@ class Tv:
             x3 = x2
         elif x2<=0:
             print('ниже 1 канал ничего нет ')
-        print('Щас включон', x3, 'канал')
+            print('Щас включон', x3, 'канал')
  
 
 def main():
     crit = Tv()
-
+    x1 = 0
+    x3 = 0
     choice = None  
     while choice != "0":
         print \
