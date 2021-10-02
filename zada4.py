@@ -1,7 +1,7 @@
 import random
 class Farm:
     """Ферма"""
-    total = 0
+    total = 3
 
     @staticmethod   
     def status():
@@ -66,11 +66,11 @@ class Farm:
         self.__pass_time()
 
 def main():
-    crit_name = input("Как хотите назвать петуха? ")
+    crit_name = input("Как хотите назвать первую зверушку? ")
     cock = Farm(crit_name)
-    crit_name = input("Как хотите назвать кота? ")
+    crit_name = input("Как хотите назвать вторую зверушку? ")
     cat = Farm(crit_name)
-    crit_name = input("Как хотите назвать собаку? ")
+    crit_name = input("Как хотите назвать третюю зверушку? ")
     dog = Farm(crit_name)
 
     choice = None
@@ -94,20 +94,20 @@ def main():
 
         elif choice == "1":
             cock.talk()
-            print('Кукарику \n')
+            print('Виииииии \n')
             cat.talk()
-            print('Мяуууууу \n')
+            print('Вуууууу \n')
             dog.talk()
-            print('Гав-Гав-Гав \n')
+            print('Хииииииииии \n')
      
         elif choice == "2":
             numb=Farm.number()
             cock.eat(numb)
-            print("Кукарику.  Спасибо тебе")
+            print("Вау,Спасибо тебе")
             cat.eat(numb)
-            print("Мяу.  Спасибо тебе")
+            print("Спасибо тебе")
             dog.eat(numb)
-            print("Гав. Спасибо тебе")
+            print("Мммм,Спасибо тебе")
 
         elif choice == "3":
             numb=Farm.number()
