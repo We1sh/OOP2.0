@@ -67,11 +67,11 @@ class Farm:
 
 def main():
     crit_name = input("Как хотите назвать первую зверушку? ")
-    cock = Farm(crit_name)
+    p1 = Farm(crit_name)
     crit_name = input("Как хотите назвать вторую зверушку? ")
-    cat = Farm(crit_name)
+    p2 = Farm(crit_name)
     crit_name = input("Как хотите назвать третюю зверушку? ")
-    dog = Farm(crit_name)
+    p3 = Farm(crit_name)
 
     choice = None
     numb=None
@@ -93,33 +93,33 @@ def main():
             print("Пока.")
 
         elif choice == "1":
-            cock.talk()
+            p1.talk()
             print('Виииииии \n')
-            cat.talk()
+            p2.talk()
             print('Вуууууу \n')
-            dog.talk()
+            p3.talk()
             print('Хииииииииии \n')
      
         elif choice == "2":
             numb=Farm.number()
-            cock.eat(numb)
+            p1.eat(numb)
             print("Вау,Спасибо тебе")
-            cat.eat(numb)
+            p2.eat(numb)
             print("Спасибо тебе")
-            dog.eat(numb)
+            p3.eat(numb)
             print("Мммм,Спасибо тебе")
 
         elif choice == "3":
             numb=Farm.number()
-            cock.play(numb)
-            cat.play(numb)
-            dog.play(numb)
+            p1.play(numb)
+            p2.play(numb)
+            p3.play(numb)
             print('Увиииииииии!!!!')
 
         elif choice =="4":
-            print(cock)
-            print(cat)
-            print(dog)
+            print(p1)
+            print(p2)
+            print(p3)
             
         else:
             print("\nПростите, но пункта", choice, "не существует")
