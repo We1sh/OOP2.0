@@ -10,7 +10,7 @@ class Tv:
         elif vol1>30:
             print('Это слишком громко')
         elif vol1<=0:
-            print('Вы же ничего не')
+            print('Вы же ничего не слышите')
         
 def main():
     crit = Tv()
