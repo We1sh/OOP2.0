@@ -1,7 +1,7 @@
 import random
 class Farm:
     """Ферма"""
-    total = 0
+    total = 3
 
     @staticmethod   
     def status():
@@ -66,12 +66,12 @@ class Farm:
         self.__pass_time()
 
 def main():
-    crit_name = input("Как хотите назвать петуха? ")
-    cock = Farm(crit_name)
-    crit_name = input("Как хотите назвать кота? ")
-    cat = Farm(crit_name)
-    crit_name = input("Как хотите назвать собаку? ")
-    dog = Farm(crit_name)
+    crit_name = input("Как хотите назвать первую зверушку? ")
+    p1 = Farm(crit_name)
+    crit_name = input("Как хотите назвать вторую зверушку? ")
+    p2 = Farm(crit_name)
+    crit_name = input("Как хотите назвать третюю зверушку? ")
+    p3 = Farm(crit_name)
 
     choice = None
     numb=None
@@ -93,33 +93,33 @@ def main():
             print("Пока.")
 
         elif choice == "1":
-            cock.talk()
-            print('Кукарику \n')
-            cat.talk()
-            print('Мяуууууу \n')
-            dog.talk()
-            print('Гав-Гав-Гав \n')
+            p1.talk()
+            print('Виииииии \n')
+            p2.talk()
+            print('Вуууууу \n')
+            p3.talk()
+            print('Хииииииииии \n')
      
         elif choice == "2":
             numb=Farm.number()
-            cock.eat(numb)
-            print("Кукарику.  Спасибо тебе")
-            cat.eat(numb)
-            print("Мяу.  Спасибо тебе")
-            dog.eat(numb)
-            print("Гав. Спасибо тебе")
+            p1.eat(numb)
+            print("Вау,Спасибо тебе")
+            p2.eat(numb)
+            print("Спасибо тебе")
+            p3.eat(numb)
+            print("Мммм,Спасибо тебе")
 
         elif choice == "3":
             numb=Farm.number()
-            cock.play(numb)
-            cat.play(numb)
-            dog.play(numb)
+            p1.play(numb)
+            p2.play(numb)
+            p3.play(numb)
             print('Увиииииииии!!!!')
 
         elif choice =="4":
-            print(cock)
-            print(cat)
-            print(dog)
+            print(p1)
+            print(p2)
+            print(p3)
             
         else:
             print("\nПростите, но пункта", choice, "не существует")
